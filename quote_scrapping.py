@@ -16,7 +16,7 @@ while page_url:
         quote_author = quote.find(attrs={"class": "author"}).get_text()
         quote_content = quote.find(attrs={"class": "text"}).get_text()
         quote_author_slug = quote.find("a")["href"]
-        quote_author_link = f"http://quotes.toscrape.com/{quote_author_slug}"
+        quote_author_link = f"{base_url}{quote_author_slug}"
 
         all_quotes_scrapped.append({
             "quote_author": quote_author,
